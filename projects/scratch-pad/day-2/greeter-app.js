@@ -35,15 +35,20 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
+    //using if else statement to return a value based on time of day
+    //hour 0 - 1 returns Good Morning!
     if (hour >= 0 && hour <= 11) {
         console.log('Good Morning!');
     }
+    //hours 12 - 16 returns Good Afternoon!
     else if (hour > 11 && hour <= 16) {
         console.log('Good Afternoon!');
     }
+    //hours 17 - 21 returns Good Evening!
     else if (hour >= 17 && hour <= 21) {
         console.log('Good Evening!');
     }
+    //hours 22-24 return Good Night - write as a default else statement and test
     else {
         console.log ('Good Night!');
     }

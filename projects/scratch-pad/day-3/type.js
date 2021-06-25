@@ -30,7 +30,7 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    const now = new Date();
+    var now = new Date();
     now instanceof Date;
     if(typeof(value) === 'string') {
     return false;
@@ -47,7 +47,7 @@ function isObject(value) {
   }
     
 
-isObject();
+return isObject();
     
     
     // YOUR CODE ABOVE HERE //

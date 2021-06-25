@@ -35,7 +35,12 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    var contact = {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast,
+    };
+    return contact;
 } 
 
 
@@ -43,18 +48,43 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
-        }
+        },
+        
+        
+        addContact: function(contact) {
+            return contacts.push('key');
+        },
+        
+        
+        findContact: function(fullName) {
+            for(var i = 0; i < contacts.length; i++) {
+                if(fullName.toLowerCase() === contacts[i].nameFirst.toLowerCase() + ' ' + contacts[i].nameLast.toLowerCase()) {
+                    return contacts[i];
+                }
+            }
+
+        },
+        removeContact: function(contact) {
+            //loop thru contacts
+            var index
+            for (var i = 0; i < contacts.length; i++) {
+            //check to see if contact in the array is the same as parameter contact
+            //if found, remove the contact, using splice
+            if (contacts[i].nameFirst === contact.nameFirst && contact[i].lastName === contact.lastName) {
+                index = i;
+            }
+            }
+            contacts.splice(index, 1); 
     }
+    }
+
 }
-
-
-
 
 // YOUR CODE GOES ABOVE HERE //
 

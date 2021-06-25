@@ -1,5 +1,5 @@
 body {
-    background: rgb(125, 198, 205);
+    background: rgb(192, 192, 192);
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
@@ -15,10 +15,13 @@ header {
 
 /* navigation menu */
 nav {
-    background: rgb(239, 80, 41);
+    background: rgb(128, 128, 128);
     margin: 0 auto;
+    margin-bottom: 20px;
     display: flex;
     padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 nav header {
     display: flex;
@@ -43,6 +46,8 @@ main {
     background: rgb(245, 238, 219);
     display: flex;
     padding:inherit;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 [class=content] {
     flex: 1;
@@ -91,4 +96,15 @@ main {
     padding-left: 5px;
     text-align: right;
     padding-right: 20px;
+}
+
+.sidebar {
+margin-right: 25px;
+padding: 10px;
+}
+
+.sidebar img {
+width: 200px;
+border-radius: 10px;
+border: 2px solid #555;
 }
