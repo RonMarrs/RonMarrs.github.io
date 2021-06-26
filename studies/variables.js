@@ -1,17 +1,23 @@
-/*
- * VARIABLES:
- *
- * 0. To hold things in memory during the life-cycle of a program, we can use variables.  Variables
- * are named identifiers that can point to values of a particular type, like a Number, String,
- * Boolean, Array, Object or another data-type.  Variables are called so because once created, we
- * can CHANGE the value (and type of value) to which they point.
- *
- * 1. To create a variable we use the keyword, var, followed by a name (id or alias) for our
- * variable.
- *
- * 2. There are 2 phases of using variables: declaration and initialization (or assignment).
- */
-
+// VARIABLES:
+/* Purpose
+ * 0: We use variables in JavaScript to hold items in memory throughout the duration of a program.
+ *	The term 'variable' refers to their very nature; once they are created; their assigned value
+	or the type of value to which they point may change. As identifiers, variables point to
+	values of a specific type; including: Number, String, Boolean, Array, Object, or other data
+	types.
+*/
+ 
+/* Use
+ * 0: To create a variable we use the keyword, var, followed by our desired variable name. It is best
+	practice to give your variable a name that reflects it's value.
+		Example: if we wanted to assign a variable to a person's first name; we might use:
+		var firstName = "Ron"
+ * 1: Did you notice that firstName is all one word and oddly capitalized? Variable names should be one
+	word, and named in what's referred to as camelCase convention. When combining two or more words
+	to formulate a variable name, the first word or letter is lower-cased and all remaining words
+	have their first letter capitalized. Examples: fullName, dayOfMonth, array, aNewArray	
+ * 2. There are two phases of using variables: declaration and initialization (or assignment).
+*/
 // 1. declaration //
 var myName;
 

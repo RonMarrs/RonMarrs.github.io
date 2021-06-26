@@ -24,15 +24,14 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     //assign an array to hold the parameters
-    let arr = [];
-    for (var i = 0; i > 1; i++); {
-        if (start[i] > end[i]) {
-            return arr.push(start[i]);
-        }
-        else {
-            return arr.push(end[i].reverse());
-        }
+    var arr = [];
+    for (let i = start; i <= end; i++) {
+        arr.push(i)
     }
+    return arr
+    
+    
+    
     
     
     
