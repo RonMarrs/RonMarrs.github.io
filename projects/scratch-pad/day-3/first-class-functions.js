@@ -14,12 +14,23 @@
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     //assign a variable with a function to test which value is greater
-   let newBase = base.filter (longerString); {
-    return longerString > newBase;
-   }
-    // YOUR CODE ABOVE HERE //
-}
+    return function(value) {
+    
+        //create an if statement comparing value > base
+        //remember: if a number is passed in as a string, JS will still evaluate it as a number
+        if(value > base) {
+            //if both strings start w/ the same ltr, return true
+            return true;
+        }
+        else {
+            return false;
+        }
 
+        //if no match - return false
+    }    
+       // YOUR CODE ABOVE HERE //
+
+}
 /** 
  * Given an input base to test against, which could be a String or Number, 
  * return a Function that tests whether a given value is less than the 
@@ -27,7 +38,20 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
+        return function(newValue) {
     
+        //create an if statement comparing value > base
+        //remember: if a number is passed in as a string, JS will still evaluate it as a number
+        if(newValue < base) {
+            //if both strings start w/ the same ltr, return true
+            return true;
+        }
+        else {
+            return false;
+        }
+
+        //if no match - return false
+    } 
     
     
     
@@ -41,7 +65,17 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+    //create a function with string as a parameter
+    return function(string) {
+        //change string to lowercase and startsWith to lowercase
+        if(string.toLowerCase().startsWith(startsWith.toLowerCase())) {
+            //if both strings start w/ the same ltr, return true
+            return true;
+        }
+        //if no match - return false
+        return false;
+        
+    }
     
     
     
@@ -55,7 +89,17 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+     //create a function with string as a parameter   
+    return function(string) {
+        //change string to lowercase and endsWith to lowercase
+        if(string.toLowerCase().endsWith(endsWith.toLowerCase())) {
+            //if both strings end w/ the same letter, return true
+            return true;
+        }
+        //if no match, return false
+        return false;
+        
+    }    
     
     
     
@@ -71,7 +115,15 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    //create an array literal named arr
+    let arr = [];
+    //run a for loop over the values
+    for (var i = 0; i < strings.length; i++) {
+        //push to arr, running strings[i] thru the modify function
+        arr.push(modify(strings[i]));
+    }
+    //return arr
+    return arr;
     
     
     
@@ -93,9 +145,8 @@ function allStringsPass(strings, test) {
         if (test(strings[i]) === false) {
             return false;
         }
-        else {
-     return true;
     }
+    return true;
    
     
     

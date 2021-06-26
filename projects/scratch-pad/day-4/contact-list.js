@@ -58,30 +58,40 @@ function makeContactList() {
         
         
         addContact: function(contact) {
-            return contacts.push('key');
+            return contacts.push(contact);
         },
         
         
         findContact: function(fullName) {
-            for(var i = 0; i < contacts.length; i++) {
+            for (var i = 0; i < contacts.length; i++) {
                 if(fullName.toLowerCase() === contacts[i].nameFirst.toLowerCase() + ' ' + contacts[i].nameLast.toLowerCase()) {
                     return contacts[i];
                 }
+            return undefined;
             }
-
+            
         },
+        
         removeContact: function(contact) {
             //loop thru contacts
             var index
             for (var i = 0; i < contacts.length; i++) {
             //check to see if contact in the array is the same as parameter contact
             //if found, remove the contact, using splice
-            if (contacts[i].nameFirst === contact.nameFirst && contact[i].lastName === contact.lastName) {
+                if (contacts[i].nameFirst === contact.nameFirst && contacts[i].nameLast === contact.nameLast) {
                 index = i;
-            }
+                }
             }
             contacts.splice(index, 1); 
-    }
+        },
+        
+        printAllContactNames: function() {
+            var string = "";
+            for (var i = 0; i < contacts.length -1; i++) {
+                string += contacts[i].nameFirst + " " + contacts[i].nameLast + "\n";
+            }
+            return string += contacts[i].nameFirst + ' ' + contacts[i].nameLast;
+        }
     }
 
 }
