@@ -25,22 +25,21 @@ function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     //assign an array to hold the parameters
     var arr = [];
-    for (let i = start; i <= end; i++) {
-        arr.push(i)
+    if (start > end) {
+        for (let i = start; i >= end; i--) {
+        arr.push(i);
+        }
     }
-    return arr
-    
-    
-    
-    
-    
-    
-    
-    // YOUR CODE GOES ABOVE HERE //
+    if (start < end) {  
+        for (let i = start; i <= end; i++) {
+        arr.push(i);
+        }
+    }
+
+     // YOUR CODE GOES ABOVE HERE //
+
+    return arr;
 }
-
-
-
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

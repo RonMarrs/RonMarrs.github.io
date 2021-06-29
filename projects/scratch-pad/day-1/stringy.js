@@ -176,10 +176,10 @@ function sortAscending(stringOne, stringTwo) {
     var wordOne = stringOne.toLowerCase();
     var wordTwo = stringTwo.toLowerCase();
     if (wordOne < wordTwo) {
-        return 1;
+        return -1;
     }
     if (wordOne > wordTwo) {
-        return -1;
+        return 1;
     }
     if (wordOne === wordTwo) {
         return 0;
@@ -202,10 +202,10 @@ function sortDescending(stringOne, stringTwo) {
     var wordOne = stringOne.toLowerCase();
     var wordTwo = stringTwo.toLowerCase();
     if (wordOne > wordTwo) {
-        return 1;
+        return -1;
     }
     if (wordOne < wordTwo) {
-        return -1;
+        return 1;
     }
     if (wordOne === wordTwo) {
         return 0;

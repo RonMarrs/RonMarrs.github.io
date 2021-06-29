@@ -13,8 +13,7 @@
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
     //a for statement is needed to loop thru numbers 1 - 100
-    for (var i=1; i<=100; i++)
-    {
+    for (var i=1; i<=100; i++) {
         // number divisible by 3 and 5 will
         // always be divisible by 15, print
         // 'FizzBuzz' in place of the number
