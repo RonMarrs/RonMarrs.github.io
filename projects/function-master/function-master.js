@@ -32,7 +32,7 @@ function valuesToString(object) {
     for (var key in object) {
         if (typeof object[key] === 'string') {
         arr.push(object[key]);
-    }
+        }
     }
     return arr.join(" ");  
 }
@@ -106,9 +106,21 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 //21
 function maybeNoises(object) {
-
+    
+    //if variable result finds a match return that animal's object
+   var arr = [];
+    for (var key of object) {
+        if (Object.keys(object) === object.noises) {
+        arr.push(object[key]);
+        return ` ${object[key]} `;
+        }
+        
+    //if there is no match, returns false
+        else {
+        return 'there are no noises';  
+        }
+    }
 }
-
 //////////////////////////////////////////////////////////////////////
 // Function 10 - Has Words ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
