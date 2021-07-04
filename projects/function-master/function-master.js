@@ -126,7 +126,15 @@ function maybeNoises(object) {
 //////////////////////////////////////////////////////////////////////
 //22
 function hasWord(string, word) {
-
+    let newString = string.split(" ");
+    for (let i = 0; i < newString.length -1; i++) {
+        if (newString[i].toLowerCase() === word.toLowerCase()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -150,7 +158,17 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 //25
 function nonFriends(name, array) {
-
+    //declare an empty array called noPal
+    var noPal = [];
+    //use for loop to cycle over each person
+    for (var i = 0; i < array.length; i++) {
+        //if statement to see if  name isn't already in friends array
+        if (array[i].name !== name && !array[i].friends.includes(name)) {
+            //push array[i].name to noPal
+            noPal.push(array[i].name);
+        }
+    }
+    return noPal;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -174,6 +192,17 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 //28
 function dedup(array) {
+    //set an empty array called noDupes
+    var noDupes = [];
+    //run a for loop to check each value in array
+    for (var i = 0; i < array.length; i++) {
+        //need a boolean result: false (push to noDupes; true (return noDupes
+        if (noDupes.includes(array[i]) === false) {
+            noDupes.push(array[i]);
+        }    
+        
+    }
+    return noDupes;
 
 }
 
